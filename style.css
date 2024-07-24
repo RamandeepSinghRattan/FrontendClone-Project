@@ -1,0 +1,393 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: black;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #F7F7F7;
+}
+
+
+#nav {
+    width: 100%;
+    position: fixed;
+    padding: 2px 14px;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    position: relative;
+    color: black;
+    
+}
+
+.h-resp {
+    height: 100px;
+}
+
+#nav-icon-box {
+    height: 83px;
+    overflow: hidden;
+}
+
+
+#nav-icon-box svg {
+    display: block;
+}
+
+
+#nav ul {
+    display: flex;
+    margin-left: auto;
+}
+
+#nav ul li {
+    list-style: none;
+    margin: 0px 25px;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0px 4px;
+    color: black;
+    font-size: 14px;
+
+}
+
+#nav-btn {
+    /* background-color: red; */
+    width: 90px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+    background-color: white;
+    padding: 5px 10px;
+
+}
+
+.list-item:hover{
+    border-bottom: 1px solid black;
+}
+
+#nav-btn i:hover{
+    cursor: pointer;
+}
+
+.opacity-resp {
+    opacity: 1;
+}
+
+#cursor {
+    height: 100px;
+    width: 100px;
+    background-color: blanchedalmond;
+    position: fixed;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    /* z-index: 2; */
+}
+
+
+
+#page1 {
+    min-height: 100vh;
+    position: relative;
+    padding: 0vh 0.5vw;
+    padding-top: 25vh;
+    /* background-color: red; */
+    width: 100%;
+
+}
+
+#page1 h1 {
+    font-size: 16vw;
+    font-family: futura;
+    text-transform: uppercase;
+    letter-spacing: -8px;
+    line-height: 13vw;
+}
+
+#video-container {
+    height: 80vh;
+    background-color: rgb(139, 93, 33);
+    margin-top: 3vh;
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+#video-container video {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+
+}
+
+#video-container #play {
+    background-color: black;
+    color: white;
+    padding: 2.8vw 2.1vw;
+    border-radius: 50%;
+    text-transform: uppercase;
+    position: fixed;
+    opacity: 0;
+    font-family: futura;
+    scale: 0;
+
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+
+}
+
+#page2 .elem {
+    height: 88%;
+    width: 30%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    height: 95%;
+    width: 55%;
+}
+
+.a2 {
+    margin-left: 0px;
+}
+
+.box:hover {
+    height: 30%;
+}
+
+.elem-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1;
+
+
+}
+
+#page3 {
+    min-height: 120vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.child {
+    height: 80vh;
+    width: 35vw;
+    /* border: 2px solid black; */
+    margin: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child img {
+    height: 80%;
+    width: 80%;
+}
+
+
+@media (max-width:768px) {
+    #page2 {
+        flex-direction: column;
+    }
+
+    #page2 .elem {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .opacity-resp {
+        opacity: 0;
+    }
+
+
+    #nav {
+        align-items: start;
+        padding-top: 20px;
+        color: white;
+    }
+    
+    .height {
+        background-color: rgb(0, 0, 0);
+        height: 230px;
+    }
+
+    .h-resp {
+        height: 120px;
+    }
+
+    #nav ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+
+    }
+    
+    #nav-btn {
+        margin-left: 20px;
+        
+    }
+    
+    #nav ul li {
+        margin: 7px 10px;
+    }
+    
+    #nav ul li a {
+        color: black;
+        font-size: 24px;
+        color: white;
+    }
+
+    .box {
+        background-color: pink;
+        height: 3%;
+        width: 40%;
+        position: absolute;
+        border-radius: 50px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    .tagbox a {
+        font-size: 14px;
+    }
+    
+
+
+    
+    
+}
+
+@media (max-width:480px) {
+    #page1 h1 {
+        font-size: 15vw;
+        font-family: futura;
+        text-transform: uppercase;
+        letter-spacing: -1.5px;
+    }
+    
+    
+    #video-container {
+        height: 80vh;
+        background-color: rgb(139, 93, 33);
+        margin-top: 3vh;
+        object-fit: cover;
+        width: 100%;
+        position: relative;
+        height: 100vh;
+    }
+
+    #video-container video {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+
+    }
+
+    #video-container #play {
+        background-color: black;
+        color: white;
+        padding: 2.8vw 2.1vw;
+        border-radius: 50%;
+        text-transform: uppercase;
+        position: fixed;
+        opacity: 0;
+        font-family: futura;
+        scale: 0;
+        
+    }
+    
+    .elem {
+        height: 70%;
+    }
+    
+    #nav ul li a{
+        font-size: 11px;
+        /* color: black; */
+    }
+    
+    #nav ul li {
+        margin:  4px 0px;
+    }
+    
+    #nav-btn{
+        margin-left: 0px;
+        width: 60px
+    }
+    
+
+    .height{
+        height: 150px;
+    }
+
+    .box{
+        height: 6%;
+        width: 60%;
+    }
+
+    .child {
+        height: 45vh;
+        width: 40vw;
+        margin: 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .child img {
+        height: 90%;
+        width: 90%;
+    }
+    
+}
+
+
+@media (max-width: 1024px) {
+    #page1 {
+        padding-top: 200px;
+    }
+
+
+    .box{
+        padding-top: 15px;
+    }
+    
+}
